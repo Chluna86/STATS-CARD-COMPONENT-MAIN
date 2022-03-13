@@ -110,17 +110,22 @@ p {
 }
 
 @media screen and (max-width: 770px) {
+    main {
+        height: 920px;
+        
+    }
     .container {
-        height: 100vh;
-        width: 90vw;
-        display: grid; 
+        height: 790px;
+        width: 95vw;
+        display: grid;
         grid-auto-rows: 1fr; 
         grid-template-columns: 1fr; 
-        grid-template-rows: 1fr 1fr; 
+        grid-template-rows: 0.8fr 1fr; 
         gap: 0px 0px; 
         grid-template-areas: "rightSide" "leftSide";
         border-radius: var(--curve);
-        
+        margin-top: 15vh;
+        margin-bottom: 15vh;
     }
 
     .rightSide {
@@ -128,22 +133,52 @@ p {
         border-bottom-right-radius: 0;
         border-top-left-radius: var(--curve);
         height: 30vh;
-        width: 100%;
+        width: 95vw;
     }
 
     .image {
         border-top-left-radius: var(--curve);
         border-bottom-right-radius: 0;
-        
     }
 
     .leftSide {
-        width: 100%;
-        grid-area: leftSide;
         display: grid;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: 0.8fr 0.6fr 1fr;
+        width: 95vw;
+        height: 100%;
+        padding: 0 20px;
     }
     
+    .title {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .discover{
+        padding: 0;
+        margin: 0 3vw;
+        display: flex;
+        align-items: flex-start;
+        text-align: center;
+        opacity: 0.8;
+        height: fit-content;
+    }
+
+    .metrics {
+        margin-top: 2vh;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        place-items: center;
+    }
+
+    .company, .templates, .queries {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 8px 0;
+    }
     
 }
 
